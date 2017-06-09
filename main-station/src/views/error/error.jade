@@ -1,0 +1,9 @@
+extends ../wigets/layout/layout
+
+block content
+    #error
+        h1.text-danger #{msg}
+        if error.status
+            h2 #{error.status}
+        if error.stack
+            pre #{error.stack}

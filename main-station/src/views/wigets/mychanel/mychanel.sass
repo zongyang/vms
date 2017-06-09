@@ -1,0 +1,33 @@
+@import "bourbon"
+@import "client"
+
+.mychanle
+	/**
+	 * side-nav
+	 */
+	.side-nav
+		margin-bottom: 20px
+		.nav-top-level
+			background: white
+			@include border-template()
+			li 
+				border-bottom: 1px solid #e7e7e7
+				margin-top: 0
+				i 
+					margin-right: 5px
+
+		.fa-arrow
+			float: right
+			line-height: 1.4
+	@media(min-width:$screen-md-min)
+		.side-nav
+			position: fixed
+			width: 150px
+	/**
+	 * dashboard
+	 */
+	.dashboard
+		.title
+			font-size: 1.6rem
+		.panel-footer
+			background-color: white

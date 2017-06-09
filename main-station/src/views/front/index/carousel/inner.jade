@@ -1,0 +1,13 @@
+.carousel-inner(role="listbox")        
+    each doc in docs
+        +carousel-item(doc)
+
+mixin carousel-item(options)
+    .item(class=options.active)
+        img.first-slide(src=options.thumbnail, alt=options.videoName)
+        .container
+            .carousel-caption
+                h1 #{options.videoName}
+                p.break-all.video-info #{options.videoInfo}
+                p
+                a.btn.btn-primary.play(href="/play/#{options._id}", role="button") Play

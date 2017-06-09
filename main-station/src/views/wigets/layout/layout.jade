@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet',href='/bower/animate.css/animate.min.css')
+        link(rel='stylesheet',href='/bower/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet',href='/bower/font-awesome/css/font-awesome.css')
+        link(rel='stylesheet',href='/bower/video.js/dist/video-js.min.css')
+        link(rel='stylesheet',href='/bower/webui-popover/dist/jquery.webui-popover.min.css')
+        //- link(rel='stylesheet', href='/bower/metisMenu/dist/metisMenu.min.css')
+        link(rel='stylesheet', href='/bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css')
+        link(rel='stylesheet', href='/bower/jQuery-contextMenu/dist/jquery.contextMenu.min.css')
+        link(rel='stylesheet', href='/bower/pace/themes/white/pace-theme-minimal.css') 
+        link(rel='stylesheet', href='/client.css')
+    body(data-spy='scroll',data-target='.scroll-spy')
+        include ../nav/nav
+        #main.container
+            include ../breadcrumb/breadcrumb
+            block content
+        include ../footer/footer
+        
+    script(src='/bower/jquery/dist/jquery.min.js')
+    script(src='/bower/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/bower/react/react-with-addons.js')
+    script(src='/bower/react/react-dom.js')
+    script(src='/bower/video.js/dist/video.min.js')
+    script(src='/bower/webui-popover/dist/jquery.webui-popover.min.js')
+    script(src='/bower/typeahead.js/dist/typeahead.bundle.min.js')
+    script(src='/bower/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')
+    script(src='/bower/jQuery-contextMenu/dist/jquery.contextMenu.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/ueditor/ueditor.config.js')
+    script(src='/ueditor/ueditor.all.min.js')
+    script(src='/ueditor/lang/zh-cn/zh-cn.js')
+    script(src='/ueditor/ueditor.parse.js')
+    script(src='/client.js')
+    script(src='/bower/pace/pace.min.js')

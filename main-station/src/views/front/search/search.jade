@@ -1,0 +1,13 @@
+extends ../../wigets/layout/layout
+include search-input
+include filter
+include grid
+include ../../wigets/page/page
+
+block content
+    #front-search
+        +search-input()
+        //- +filter()
+        +grid()
+        //- +page()
+        

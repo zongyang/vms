@@ -1,0 +1,7 @@
+node_modules/
+main-station/bin/
+public/*
+.DS_Store
+npm-debug.log
+!public/ueditor
+/.project

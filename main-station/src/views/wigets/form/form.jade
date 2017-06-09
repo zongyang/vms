@@ -1,0 +1,18 @@
+
+include ../input/input
+mixin form(title,inputs,textareas,action,enctype)
+    .form
+        .panel.panel-default
+            .panel-heading 
+                .text-primary.text-center #{title}
+            .panel-body
+                form(role='form',enctype=enctype,action=action)
+                    if inputs
+                        each input in inputs
+                            +input(input)
+                    if textareas
+                        each textarea in textareas
+                            +textarea(textarea)
+                    if(buttons)
+                    button.btn.btn-block.btn-success.submit #{title}
+

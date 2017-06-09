@@ -1,0 +1,18 @@
+extends ../../wigets/layout/layout
+
+include ../../wigets/video/timeline
+include ../../wigets/video/player
+include ../../wigets/video/info-edit
+include ../../wigets/video/ueditor
+
+block content
+    #front-edit-video
+        .row.play-container
+            .col-lg-2.hidden-md.hidden-sm.hidden-xs
+                +timeline()
+            .col-lg-7
+                +palyer()
+            .col-lg-3
+                //- +info()
+                +info-edit(doc.videoName,doc.videoInfo)
+        +ueditor()

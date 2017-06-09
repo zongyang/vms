@@ -1,0 +1,19 @@
+mixin side-nav()
+    .side-nav
+        ul.nav.nav-stacked.nav-pills.nav-top-level
+            li.uploaded
+                a(href='/uploaded')
+                    i.fa.fa-film.fa-fw 
+                    | 我的视频
+            li.info
+                a(href='/info')
+                    i.fa.fa-info.fa-fw 
+                    | 个人资料
+            li.password
+                a(href='/password')
+                    i.fa.fa-key.fa-fw  
+                    | 密码修改
+            li.logout
+                a(href='#') 
+                    i.fa.fa-sign-out.fa-fw  
+                    | 注销登录

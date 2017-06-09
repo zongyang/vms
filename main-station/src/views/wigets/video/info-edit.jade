@@ -1,0 +1,7 @@
+include ../form/form
+mixin info-edit(videoName,videoInfo)
+    .info-edit
+        +form('信息修改',
+                [{type:'text',name:'videoName',placeholder:'视频标题',val:videoName}],
+                [{name:'videoInfo',placeholder:'视频简介',val:videoInfo}]
+            )

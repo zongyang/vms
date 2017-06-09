@@ -1,0 +1,12 @@
+ol.breadcrumb
+    each breadcrumb in breadcrumbs
+        if breadcrumb.active
+            li.active #{breadcrumb.name}
+        else
+            li
+                a(href=breadcrumb.route) #{breadcrumb.name}
+    //- li
+    //-     a(href='#') Home
+    //- li
+    //-     a(href='#') Home1
+    //- li.active Home2

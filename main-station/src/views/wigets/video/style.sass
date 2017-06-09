@@ -1,0 +1,88 @@
+@import "bourbon"
+@import "client"
+
+/**
+ * player
+ */
+.panel-video
+	padding: 5px
+	.video-js
+		width: 100%
+		height: $video-height
+		border-radius: 2px
+	.video-link
+		width: 100%
+		height: 100%
+
+	.link
+		color: white
+		z-index: 1
+		cursor: pointer
+
+		
+/**
+ * ueditor
+ */
+.edit-video-link
+	div
+		z-index: 2
+	.edit-video-panel
+		width: 20rem
+	.cancle
+		margin-left: 5px
+
+.edit-container
+	.btn
+		margin-top: 20px
+	.cancle
+		margin-left: 10px
+
+/**
+ * info
+ */
+.panel-video-title
+	overflow-y: auto
+	small
+		margin-right: 5px
+	.videoName
+		font-size: 1rem
+		font-weight: bold
+	.videoInfo
+		margin: 0
+	.panel-body
+		max-height: $video-height - 7.5rem
+		overflow: auto
+.info-edit
+	[name='videoInfo']
+		height: $video-height - 10.6rem
+
+
+
+/**
+ * link
+ */
+.popover
+	cursor: default
+.popover-content
+	overflow: auto
+	max-height: 15rem
+	min-width: 15rem // 中文字体时，宽度会消失 不解
+/**
+ * timeline
+ */
+.mCustomScrollbar
+	height: $video-height
+	.list-group-item
+		cursor: pointer
+		&:not(.active):hover
+			background: rgba(51,122,183,0.2)
+		&.active
+			z-index: initial
+/**
+ * context-menu
+ */
+.context-menu-list
+	min-width: initial
+.context-menu-active
+	background: rgba(51,122,183,0.2)
+

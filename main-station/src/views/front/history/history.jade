@@ -1,0 +1,34 @@
+extends ../../wigets/layout/layout
+block content
+    #front-history.row
+        .col-md-3
+            +index()
+        .col-md-9
+            +content()
+
+mixin index()
+    .history-index.scroll-spy
+        ul.nav.nav-pills.nav-stacked(data-spy='affix')
+            each history in historys
+                li
+                    a(href='##{history.video._id}') #{history.video.videoName}
+
+mixin content()
+   each history in historys 
+        .panel.panel-default(id=history.video._id)
+            .panel-heading.break-all 
+                strong.text-primary #{history.video.videoName}
+                small.text-muted.time 观看到 #{history.time}
+            .panel-body
+                .col-md-4.col-xs-8
+                    a.thumbnail
+                        img(src='#{history.video.thumbnail}')
+                .col-md-8.col-xs-12
+                    p.break-all.video-info #{history.video.videoInfo}
+            .panel-footer 
+                a.btn.btn-sm.btn-primary(href='/play/#{history.time}/#{history.video._id}') 续播
+
+
+mixin panel(video)
+    
+    

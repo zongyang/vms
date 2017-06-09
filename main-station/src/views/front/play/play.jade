@@ -1,0 +1,18 @@
+extends ../../wigets/layout/layout
+
+include ../../wigets/video/timeline
+include ../../wigets/video/player
+include ../../wigets/video/info
+include comment
+
+block content
+    #front-play
+        .row.play-container
+            .col-lg-2.hidden-md.hidden-sm.hidden-xs
+                +timeline()
+            .col-lg-7
+                +palyer()
+            .col-lg-3
+                 +info()
+        .row
+            +comment()

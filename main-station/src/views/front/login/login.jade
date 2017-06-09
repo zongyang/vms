@@ -1,0 +1,24 @@
+extends ../../wigets/layout/layout
+include ../../wigets/form/form
+block content
+    #front-login
+        .row
+            .col-md-4.col-md-offset-4
+                form.panel.panel-default(role='form')
+                    .panel-heading 
+                        .text-primary.text-center 登录
+                    .panel-body
+                        +input({
+                            type:'text',
+                            name:'username',
+                            zhName:'用户名',
+                            placeholder:'用户名'
+                        })
+                        +input({
+                            type:'password',
+                            name:'password',
+                            zhName:'密码',
+                            placeholder:'密码'
+                        })
+                        button.button.btn.btn-block.btn-success.submit 登录
+                        a(href='/register').button.btn.btn-block.btn-default.register 注册

@@ -1,0 +1,26 @@
+include ../input/input
+mixin ueditor()
+    .row.edit-container.hidden-1
+        .col-md-12
+            p
+                strong 时间: 
+                strong.text-primary.time 
+            p
+                strong 位置
+                small (%)
+                strong :
+                strong.text-primary.position.x  
+                small (x),
+                strong.text-primary.position.y 
+                small (y) 
+            form(role='form')
+                +input({
+                    type:'text',
+                    name:'link-title',
+                    zhName:'标题',
+                    placeholder:'标题',
+                    cls:'link-title-input'
+                })
+                script#edit-video-ue-container(name='content',type='text/plain')
+                a.btn.btn-primary.submit 保存
+                a.btn.btn-danger.cancle 取消

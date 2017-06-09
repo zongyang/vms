@@ -1,0 +1,47 @@
+extends ../../wigets/mychanel/mychanel
+include ../../wigets/form/form
+block mychanel
+    #front-add-video
+        form.panel.panel-default(role='form',enctype='multipart/form-data',action='/video')
+            .panel-heading.bg-white 添加视频
+            .panel-body
+                .row
+                    //- +progressbar()
+                    .col-md-6
+                        +input({
+                            type:'file',
+                            name:'url',
+                            zhName:'视频文件',
+                            fileType:'video'
+                        })
+                        +input({
+                            type:'text',
+                            name:'videoName',
+                            zhName:'视频名称',
+                            placeholder:'视频名称',
+                            val:videoName
+                        })
+                        //- +input({
+                        //-     type:'text',
+                        //-     name:'tag',
+                        //-     zhName:'标签',
+                        //-     placeholder:'标签',
+                        //-     val:tag
+                        //- })
+                        +textarea({
+                            name:'videoInfo',
+                            zhName:'视频简介',
+                            placeholder:'视频简介',
+                            rows:4,
+                            val:info
+                        })
+                                  
+                        button.btn.btn-primary.submit 
+                            i.fa.fa-spinner.fa-pulse.fa-fw.hidden-1
+                            | 确定
+
+
+mixin progressbar()
+    .progress.progress-striped.active
+        .progress-bar.progress-bar-info(role='progressbar',style='width:40%')
+

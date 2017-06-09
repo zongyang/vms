@@ -1,0 +1,39 @@
+include ../../wigets/input/input
+extends ../../wigets/mychanel/mychanel
+block mychanel
+    #front-info
+        form.panel.panel-default(role='form',enctype='multipart/form-data',action='')
+            .panel-heading.bg-white 个人资料
+            .panel-body
+                .row
+                    .col-md-6
+                        +avator(avator)
+                        +input({
+                            type:'text',
+                            name:'username',
+                            zhName:'用户名',
+                            placeholder:'用户名',
+                            val:username
+                        })
+                        +textarea({
+                            name:'signature',
+                            zhName:'个性签名',
+                            placeholder:'个性签名',
+                            rows:4,
+                            val:signature
+                        })
+                        button.btn.btn-primary.submit 
+                            i.fa.fa-spinner.fa-pulse.fa-fw.hidden-1
+                            | 确定
+mixin avator(src)
+    a.thumbnail.preview
+        img(src=src)     
+    +input({
+        type:'file',
+        name:'avator',
+        zhName:'头像',
+        cls:'preview-btn',
+        filePath:avator,
+        fileType:'img'
+    })
+

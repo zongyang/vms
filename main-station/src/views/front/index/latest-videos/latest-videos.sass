@@ -1,0 +1,19 @@
+@import "bourbon"
+@import "client"
+
+.latest
+	.item
+		@include border-template()
+		margin-top: 20px
+		&:last-child
+    		padding-bottom: 0
+	.text,.image
+		padding: 10px
+	.text-muted
+		margin-right: 5px
+		font-size: 0.8rem
+	.video-info
+		max-height: 10rem
+		overflow: auto
+
+	

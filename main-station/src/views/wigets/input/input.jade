@@ -1,0 +1,33 @@
+//type: text、file、password 。。。
+//name: input的name属性
+//zhName: input的中文名属性，用于验证时报错中文提示
+//placeholder
+//cls: className
+//val: input的value属性
+//filePath: 用于type=file时，文件已上传不改变的情况
+mixin input(options)
+    .form-group.has-feedback
+        input.form-control(
+            type=options.type,
+            name=options.name,
+            zh-name=options.zhName,
+            placeholder=options.placeholder,
+            class=options.cls,
+            value=options.val,
+            data-file-path=options.filePath,
+            data-file-type=options.fileType
+        )
+        i.fa.form-control-feedback
+        .help-block.with-errors
+
+mixin textarea(options)
+    .form-group.has-feedback
+        textarea.form-control(
+            name=options.name,
+            zh-name=options.zhName,
+            placeholder=options.placeholder,
+            rows=options.rows,
+            class=options.cls
+        ) #{options.val}
+        i.fa.form-control-feedback
+        .help-block.with-errors

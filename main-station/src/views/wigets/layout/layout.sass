@@ -1,0 +1,108 @@
+@import "bourbon"
+@import "client"
+
+/**
+ * 标签默认样式
+ */
+*
+	margin: 0
+	padding: 0
+
+body
+	font-family:  "Microsoft YaHei","Microsoft YaHei", Verdana, sans-serif, "SimSun"
+	background-color: $bg-color
+	font-size: 1rem
+/* 超小设备（手机，小于 768px）默认 */
+html
+	font-size: 12px
+
+/* 小型设备（平板电脑，768px 起） */
+@media (min-width: $screen-sm-min) 
+	html
+		font-size: 14px
+/* 中型设备（台式电脑，992px 起） */
+@media (min-width: $screen-md-min) 
+	html
+		font-size: 15px
+/* 大型设备（大台式电脑，1200px 起） */
+@media (min-width: $screen-lg-min) 
+	html
+		font-size: 16px
+
+a:hover
+	text-decoration: none
+li
+	list-style: none
+/**
+ * 其他全局设置
+ */
+
+#main
+	position: relative
+	margin: auto
+	margin-top: 70px
+	min-height: 10rem
+.popover
+	color: black
+
+
+/**
+ * 语义命名
+ */
+.full
+	width: 100%
+.absolute
+	position: absolute
+.relative
+	position: relative
+.fixed
+	position: fixed
+.hidden-1 //bootstarp的hidden的优先级比自定义的高？不清楚什么原因
+	display: none
+.left
+	float: left
+.right
+	float: right
+.inline-block
+	display: inline-block
+.inline
+	display: inline
+.description
+	color: $gray
+.divider
+    overflow: hidden
+    background-color: $light-gray
+    height: 1px 
+.ellipsis
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+.break-all
+	word-break: break-all
+
+/**
+ * modal
+ */
+.modal
+	.modal-dialog
+		
+		margin-top: 150px
+	&.loading
+		.modal-dialog
+			width: 120px
+		.loding-text
+			margin-top: 10px
+			font-size: 15px
+			font-weight: bold
+	&.alert
+		.alert-text
+			font-size: 15px
+			font-weight: bold
+
+	&.progressbar
+		.progress
+			margin-bottom: 0
+			strong 	
+				font-size: 15px
+
+	

@@ -1,0 +1,22 @@
+mixin thumb-panel(options)
+    .thumb-panel.col-sm-4.col-md-3
+        .panel.panel-default
+            .panel-body
+                .relative
+                    .duration.bg
+                    .duration.time 
+                        span #{options.duration}
+                    .duration.paly.normal-play.swing.animated
+                        a(href='/play/#{options._id}')
+                            i.fa.fa-play-circle-o.fa-fw
+                    img.img-responsive(src='#{options.thumbnail}')
+            .panel-footer
+                .text-primary
+                    strong.videoName.ellipsis #{options.videoName}
+                .ellipsis 用户: #{options.uploader.username}
+                .ellipsis 时间: #{options.localUploadTime}
+                .ellipsis 简介: #{options.videoInfo}
+                div 
+                    span.commentsCount #{options.commentsCount}次评论
+                    span #{options.playCount}次播放 
+                    span 3次评论

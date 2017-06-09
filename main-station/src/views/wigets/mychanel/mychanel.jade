@@ -1,0 +1,12 @@
+extends ../layout/layout
+include side-nav
+include dashboard
+block content
+    .mychanle
+        .row
+            .col-md-2
+                +side-nav()
+            .col-md-10
+                //- +dashboard()
+                block mychanel
+

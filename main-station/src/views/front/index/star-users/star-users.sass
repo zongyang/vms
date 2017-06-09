@@ -1,0 +1,33 @@
+@import "bourbon"
+@import "client"
+
+$big-height: 200px
+$small-height: 95px
+$bg-height: 30px //背景高度
+$bg-hover-height: $small-height //背景hover高度
+
+			
+#star-users
+	.item
+		@include border-template()
+		padding: 10px
+		margin-top: 20px
+		&:last-child
+			padding-bottom: 0
+	/**
+	 * thumb.ajde
+	 */
+	
+	/**
+	 * user.ajde
+	 */
+	.user
+		border-bottom: 1px solid $light-gray
+		padding-bottom: 8px 
+		.avator
+			width: 32px
+			height: 32px
+			border-radius: 50%
+		.username
+			margin: 0 5px 0 8px
+			font-weight: bold

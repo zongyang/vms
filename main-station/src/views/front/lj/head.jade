@@ -1,0 +1,21 @@
+
+.row.head
+    if hdl
+        +hdl()
+    else
+        +lj()
+
+mixin lj()
+    .col-md-12
+        img.img-rounded.img-responsive(src='/images/4.jpg')
+mixin hdl()
+    .col-sm-6
+        img.img-rounded.img-responsive(src='/images/4.jpg')
+    .col-sm-6.sub-title
+        //- h4.text-primary 此处插入标题
+        //- .text-muted 这里是介绍这里是介绍这里是介绍这里是介绍这里是介绍这里是介绍
+        .panel.panel-default
+            .panel-heading 
+                h4 此处插入标题
+            .panel-body
+                p 这里是介绍这里是介绍这里是介绍这里是介绍这里是介绍这里是介绍

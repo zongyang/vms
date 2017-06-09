@@ -1,0 +1,27 @@
+extends ../../wigets/mychanel/mychanel
+include ../../wigets/page/page
+include ../../wigets/thumb-panel/thumb-panel-edit
+
+block mychanel
+    #front-uploaded
+        .video-list
+            .panel.panel-default
+                +panel-heading()
+                +panel-body()
+
+mixin panel-heading()
+    .panel-heading 
+        span.pull-left
+            i.fa.fa-list.fa-fw
+            | 视频列表
+        a.add.btn.btn-primary.btn-sm.pull-right(href='/add-video') 添加视频
+        .clearfix
+
+mixin panel-body()
+    .panel-body
+        .row
+            .col-md-12
+                each doc in docs
+                    +thumb-panel-edit(doc) 
+        //- +page()
+

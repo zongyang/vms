@@ -1,0 +1,26 @@
+
+.modal.fade
+    .modal-dialog
+        .modal-content
+            +modal-body()
+        +modal-close-btn()
+mixin modal-close-btn()
+    button.close(type="button", data-dismiss="modal", aria-label="Close")
+        span(aria-hidden="true")   &#215;
+                
+mixin modal-body()
+    .modal-body
+        .row
+            .col-md-7
+                img.img-responsive(src='/images/4.jpg')
+            .col-md-5
+                .panel.panel-default
+                    .panel-heading 简介
+                    .panel-body.info
+                        p 这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介这里是图片简介
+                    .panel-footer
+                        button.btn.btn-primary.pull-right 确定
+                        .clearfix
+
+
+

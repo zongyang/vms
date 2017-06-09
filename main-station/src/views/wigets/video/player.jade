@@ -1,0 +1,12 @@
+mixin palyer()
+    //- .col-md-9
+    .panel.panel-info
+        .panel-body.panel-video
+            .relative
+                video.video-js.vjs-default-skin.vjs-big-play-centered(
+                    controls="all",
+                    preload="none",
+                    data-step="{}",
+                    poster=doc.thumbnail
+                )
+                    source(src=doc.url,type='video/mp4')

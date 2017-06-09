@@ -1,0 +1,13 @@
+.row.img-list
+    -for(var i=0;i<10;i++)
+        +img-template()
+
+mixin img-template()
+    .col-sm-4
+        .panel.panel-default
+            .panel-body
+                //- iframe.img-responsive(src='http://www.baidu.com')
+            .panel-footer
+                span.text-primary.pull-left 文件名
+                a(href='#').pull-right 检索
+                .clearfix

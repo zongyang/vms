@@ -1,0 +1,7 @@
+
+script(tyoe='text/javascript').
+    var modal=$('.modal')
+    $('.img-list').delegate('img','click',function(event){
+    modal.find('img').attr('src',$(this).attr('src'));
+    modal.modal();
+    });

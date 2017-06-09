@@ -1,0 +1,13 @@
+include ../../wigets/thumb-panel/thumb-panel
+mixin grid()
+    .grid.row
+        .col-md-12
+            each doc in docs
+                +thumb-panel(doc)
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+
+.row.thumb
+    //右侧小缩略图
+    +small-thumb-template()
+    //左侧大缩略图
+    +big-thumb-tempalte()
+    
+
+
+mixin big-thumb-tempalte()
+    .col-md-6.col-sm-6.col-xs-7
+        +img-template('big-img') 
+
+mixin small-thumb-template()
+    .col-md-2.col-sm-3.col-xs-5
+        +img-template('small-img') 
+        +img-template('small-img','p-top-10') 
+    .col-md-2.col-sm-3.hidden-xs
+        +img-template('small-img') 
+        +img-template('small-img','p-top-10')
+    .col-md-2.hidden-sm.hidden-xs
+        +img-template('small-img') 
+        +img-template('small-img','p-top-10')  
+                  
+         
+mixin img-template(size,padding)
+    .relative(class=padding)
+        img.img-responsive.full(src='/images/3.jpg',class=size)
+        .thumb-bg
+        .thumb-info
+            li.caption
+                span 视频标题
+            li.other-info.hidden-1
+                span 3.5万次播放
+                span 25次评论
+            li.wrap-btn.hidden-1
+                button.btn.btn-xs.btn-primary(href='#') 立即播放

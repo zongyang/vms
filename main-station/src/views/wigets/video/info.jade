@@ -1,0 +1,14 @@
+mixin info()
+    .panel.panel-default.panel-video-title
+        .panel-heading
+            strong.videoName.text-primary #{doc.videoName}
+        .panel-body 
+            p.videoInfo.break-all #{doc.videoInfo}
+        .panel-footer
+            .text-muted
+                small 时长 #{doc.duration}
+            .text-muted
+                small 上传于 #{doc.localUploadTime}
+            .text-muted
+                small 评论#{doc.commentsCount}次
+                small 观看#{doc.playCount}次

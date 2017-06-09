@@ -1,0 +1,35 @@
+
+mixin comment()
+    .col-md-12
+        .panel-comment.panel.panel-default
+            .panel-heading
+                i.fa.fa-comments.fa-fw
+                | 评论
+            .panel-body.panel-body-comment
+                //- ul.comment
+                //-     +msg-item()
+                //-     +msg-item()
+                //-     +msg-item()
+                //-     +msg-item('hidden-1')
+            .panel-footer
+                .input-group
+                    input.form-control.input-comment(type='text',placeholder='留言')
+                    span.input-group-btn
+                        button.btn.btn-warning.btn-comment 发送
+
+
+mixin msg-item(cls)
+    li.comment-item.col-md-12.left.clearfix(class=cls)
+        span.pull-left
+            img.avator.img-circle(src="/images/2.jpg")
+        .comment-body.clearfix
+            .row
+                .header
+                    strong.text-primary.username Jack Sparrow
+                    small.text-muted
+                        i.fa.fa-clock-o.fa-fw
+                        sapn.uploadTime 12 mins ago
+                p.content
+                  | Lorem ipsum drnare dolor, quis
+
+    .test.col-md-12

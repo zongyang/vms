@@ -1,0 +1,32 @@
+mixin notLogin()
+    li
+        a(href="/login")
+            i.fa.fa-sign-in.fa-fw 
+            | 登录
+        a(href="/register")
+            i.fa.fa-registered.fa-fw
+            | 注册
+mixin login()
+    li
+        a(href="/info")
+            i.fa.fa-sign-out.fa-fw 
+            | 个人中心
+        a.logout(href="#!")
+            i.fa.fa-info.fa-fw
+            | 注销
+
+mxin
+
+
+ul.nav.navbar-nav.navbar-right.login
+    li.dropdown
+        a.dropdown-toggle(href="#",data-toggle="dropdown",role="button", aria-haspopup="true", aria-expanded="false")
+            i.fa.fa-user.fa-fw
+            span.caret
+        ul.dropdown-menu
+            if user
+                +login()
+            else
+                +notLogin()
+                
+
