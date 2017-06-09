@@ -1,7 +1,8 @@
+
 ####  视频管理系统
-后台：nodejs、express、mongodb、websocket、fluent-ffmpeg、七牛...
-前台：reactjs、bootstrap、jquery....
-工具：gulp、bower、browserify
+1. 后台：nodejs、express、mongodb、websocket、fluent-ffmpeg、七牛...
+2. 前台：reactjs、bootstrap、jquery....
+3. 工具：gulp、bower、browserify
 
 
 ####  目录
@@ -13,4 +14,5 @@
 #### 效果图
 
 ![image](docs/1.png)
+
 ![image](docs/2.png)
